@@ -1,12 +1,18 @@
 # game
 
-Minimal runnable React/Vite demo that renders the `Layout` component.
+A usable, self-contained web app demo for LocalLove.
 
-## Run locally
+## Run locally (no npm install required)
 
 ```bash
-npm install
-npm run dev
+python3 -m http.server 4173
 ```
 
-Open the URL shown by Vite (typically `http://127.0.0.1:5173`).
+Open `http://127.0.0.1:4173`.
+
+## Features
+
+- Hash-based routing for key pages
+- Mobile menu toggle
+- Simulated auth sign in/sign out (via `localStorage`)
+- Cart badge with add/clear cart demo actions

@@ -3,10 +3,61 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LocalLove Demo</title>
+    <title>LocalLove</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <div id="app" class="app-shell">
+      <header class="header">
+        <div class="header-inner">
+          <a class="logo" href="#/">
+            <div class="logo-mark">❤</div>
+            <span>LocalLove</span>
+          </a>
+
+          <nav class="desktop-nav">
+            <a href="#/" data-route="Home">Discover</a>
+            <a href="#/my-business" data-route="MyBusiness" class="auth-only">My Dashboard</a>
+          </nav>
+
+          <div class="actions">
+            <button id="wishlistBtn" class="icon-btn auth-only" title="Wishlist">❤</button>
+            <button id="cartBtn" class="icon-btn" title="Cart">
+              🛒
+              <span id="cartBadge" class="badge hidden">0</span>
+            </button>
+            <a class="add-btn" href="#/add-business">Add Business</a>
+
+            <div id="userMenuWrap" class="auth-only user-menu-wrap">
+              <button id="avatarBtn" class="avatar">U</button>
+              <div id="userMenu" class="user-menu hidden">
+                <a href="#/my-business">My Dashboard</a>
+                <a href="#/orders">My Orders</a>
+                <a href="#/wishlist">My Wishlist</a>
+                <button id="logoutBtn" class="danger">Sign Out</button>
+              </div>
+            </div>
+
+            <button id="loginBtn" class="outline-btn">Sign In</button>
+            <button id="mobileToggle" class="icon-btn mobile-only" title="Menu">☰</button>
+          </div>
+        </div>
+
+        <div id="mobileMenu" class="mobile-menu hidden">
+          <a href="#/">Discover</a>
+          <a href="#/my-business" class="auth-only">My Dashboard</a>
+          <a href="#/add-business">Add Business</a>
+        </div>
+      </header>
+
+      <main id="content" class="main"></main>
+
+      <footer class="footer">
+        <div class="footer-logo">❤ LocalLove</div>
+        <p>Supporting local businesses, building stronger communities.</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
   </body>
 </html>
